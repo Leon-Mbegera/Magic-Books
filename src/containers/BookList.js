@@ -6,11 +6,13 @@ import Book from '../components/Book';
 const BookList = ({ books }) => (
 
   <table>
-    <tr>
-      <th>Book Id</th>
-      <th>Title</th>
-      <th>Category</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Book Id</th>
+        <th>Title</th>
+        <th>Category</th>
+      </tr>
+    </thead>
     <Book books={books} />
   </table>
 );
@@ -24,7 +26,7 @@ BookList.defaultProps = {
 };
 
 const mapStateToProps = (state) => ({
-  books: state.booksReducer.books,
+  books: state.bookReducer.books,
 });
 
 export default connect(mapStateToProps)(BookList);
