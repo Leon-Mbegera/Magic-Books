@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 
 const BooksList = ({ books }) => (
-
   <table>
     <thead>
       <tr>
