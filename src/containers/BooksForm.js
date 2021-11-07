@@ -18,8 +18,8 @@ const BooksForm = () => {
   const { title, category } = state;
   return (
     <form className="book-form">
-      <input type="text" id="title" placeholder="Add title" autofill="off" value={title} onChange={handleChange} />
-      <select id="category">
+      <input type="text" name="title" placeholder="Add title" autofill="off" value={title} onChange={handleChange} />
+      <select name="category" value={category} onChange={handleChange}>
         {Categories.map((category, idx) => <option key={idx.id}>{category}</option>)}
       </select>
       <button type="submit">Add book</button>
