@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ books }) => (
+const Book = ({ book }) => (
 
-  <tbody>
-    {books.map((bk) => (
-      <tr key={bk.id}>
-        <td>{bk.id}</td>
-        <td>{bk.title}</td>
-        <td>{bk.category}</td>
-      </tr>
-    ))}
-  </tbody>
+  <tr key={book.id}>
+    <td>{book.id}</td>
+    <td>{book.title}</td>
+    <td>{book.category}</td>
+  </tr>
 );
 
 Book.propTypes = {
-  books: PropTypes.shape.isRequired,
+  book: PropTypes.shape.isRequired,
 };
 
 export default Book;
