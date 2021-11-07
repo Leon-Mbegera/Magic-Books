@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { createBook } from '../actions/index';
+import store from '../reducers';
 
 const BooksForm = () => {
   const [state, setState] = useState({
@@ -14,6 +16,15 @@ const BooksForm = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    store.dispatch(createBook(state));
+    setState({
+      title: '',
+      category: '',
+    });
+    e.preventDefault();
+  };
+
   const Categories = ['Action', 'Romance', 'Mystery', 'History', 'Wildlife', 'Science'];
   const { title, category } = state;
   return (
@@ -22,7 +33,7 @@ const BooksForm = () => {
       <select name="category" value={category} onChange={handleChange}>
         {Categories.map((category, idx) => <option key={idx.id}>{category}</option>)}
       </select>
-      <button type="submit">Add book</button>
+      <button type="submit" onClick={handleSubmit}>Add book</button>
     </form>
   );
 };
