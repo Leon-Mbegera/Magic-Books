@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BookForm = () => {
+const BooksForm = () => {
   const Categories = ['Action', 'Romance', 'Mystery', 'History', 'Wildlife', 'Science'];
   return (
     <form className="book-form">
@@ -13,4 +13,4 @@ const BookForm = () => {
   );
 };
 
-export default BookForm;
+export default BooksForm;

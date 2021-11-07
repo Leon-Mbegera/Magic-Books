@@ -1,6 +1,21 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions';
 
-const bookReducer = (state = [], action) => {
+const initialState = {
+  books: [
+    {
+      id: Math.floor(Math.random() * 40),
+      title: 'Mediation and Assassination',
+      category: 'History',
+    },
+    {
+      id: Math.floor(Math.random() * 40),
+      title: 'Naked in Death',
+      category: 'Romance',
+    },
+  ],
+};
+
+const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_BOOK:
       return [...state, action.book];
