@@ -1,9 +1,14 @@
 const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
+const CHANGE_FILTER = 'CHANGE_FILTER';
 
 const createBook = (book) => ({
   type: CREATE_BOOK,
-  book,
+  book: {
+    id: Math.floor(Math.random() * 30),
+    title: book.title,
+    category: book.category,
+  },
 });
 
 const removeBook = (book) => ({
@@ -11,6 +16,11 @@ const removeBook = (book) => ({
   payload: book,
 });
 
+const changeFilter = (book) => ({
+  type: CHANGE_FILTER,
+  payload: book,
+});
+
 export {
-  CREATE_BOOK, REMOVE_BOOK, createBook, removeBook,
+  CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, createBook, removeBook, changeFilter,
 };
