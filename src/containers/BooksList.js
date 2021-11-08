@@ -24,7 +24,7 @@ const BooksList = ({ books, filter }) => {
 
   return (
     <div>
-      <CategoryFilter />
+      <CategoryFilter handleChange={handleFilterChange} />
       <table>
         <thead>
           <tr>
@@ -38,7 +38,7 @@ const BooksList = ({ books, filter }) => {
           {books.map((book, idx) => (
             <Book
               key={book.id}
-              book={book}
+              book={filteredBook}
               handleRemoveBook={() => { handleRemoveBook(idx); }}
             />
           ))}
@@ -66,6 +66,7 @@ BooksList.defaultProps = {
 
 const mapStateToProps = (state) => ({
   books: state.bookReducer.books,
+  filter: state.filterReducer,
 });
 
 export default connect(mapStateToProps)(BooksList);
