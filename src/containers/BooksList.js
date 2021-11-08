@@ -6,7 +6,7 @@ import store from '../reducers/index';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({ books }) => {
+const BooksList = ({ books, filter }) => {
   const handleRemoveBook = (bk) => {
     store.dispatch(removeBook(bk));
   };
@@ -14,6 +14,13 @@ const BooksList = ({ books }) => {
   const handleFilterChange = (e) => {
     store.dispatch(changeFilter(e.target.value));
   };
+
+  let filteredBook = '';
+  if (filter === 'All') {
+    filteredBook = books;
+  } else {
+    filteredBook = books.filter((book) => book.category === filter);
+  }
 
   return (
     <div>
@@ -42,11 +49,19 @@ const BooksList = ({ books }) => {
 };
 
 BooksList.propTypes = {
-  books: PropTypes.arrayOf,
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      category: PropTypes.string,
+    }),
+  ),
+  filter: PropTypes.string,
 };
 
 BooksList.defaultProps = {
   books: [],
+  filter: '',
 };
 
 const mapStateToProps = (state) => ({
