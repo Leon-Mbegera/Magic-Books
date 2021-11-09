@@ -1,14 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { createBook } from '../actions/index';
+import store from '../reducers';
 
 const BooksForm = () => {
+  const [state, setState] = useState({
+    title: '',
+    category: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState({
+      ...state,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    store.dispatch(createBook(state));
+    setState({
+      title: '',
+      category: '',
+    });
+    e.preventDefault();
+  };
+
   const Categories = ['Action', 'Romance', 'Mystery', 'History', 'Wildlife', 'Science'];
+  const { title, category } = state;
   return (
     <form className="book-form">
-      <input type="text" placeholder="Add title" autofill="off" />
-      <select>
+      <input type="text" name="title" placeholder="Add title" autofill="off" value={title} onChange={handleChange} />
+      <select name="category" value={category} onChange={handleChange}>
         {Categories.map((category, idx) => <option key={idx.id}>{category}</option>)}
       </select>
-      <button type="submit">Add book</button>
+      <button type="submit" onClick={handleSubmit}>Add book</button>
     </form>
   );
 };
