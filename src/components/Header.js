@@ -4,11 +4,11 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => (
   <header>
-    <nav>
-      <div>
-        <h1>Bookstore CMS</h1>
-        <span>Books</span>
-        <span>Categories</span>
+    <nav className="header-nav">
+      <div className="left-side">
+        <h1 className="heading">Bookstore CMS</h1>
+        <span className="Books">BOOKS</span>
+        <span className="Books">CATEGORIES</span>
       </div>
       <div>
         <FontAwesomeIcon icon={faUser} />
