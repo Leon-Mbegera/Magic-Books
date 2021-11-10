@@ -10,8 +10,8 @@ const Header = () => (
         <span className="Books">BOOKS</span>
         <span className="Books">CATEGORIES</span>
       </div>
-      <div>
-        <FontAwesomeIcon icon={faUser} />
+      <div className="Oval">
+        <FontAwesomeIcon icon={faUser} className="Mask" />
       </div>
     </nav>
   </header>
