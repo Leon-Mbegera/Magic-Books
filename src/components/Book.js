@@ -6,13 +6,13 @@ import 'react-circular-progressbar/dist/styles.css';
 const Book = ({ book, handleRemoveBook }) => (
   <div className="Book-panel">
     <div classsName="book-description">
-      <h5>{book.category}</h5>
-      <h2>{book.title}</h2>
-      <p>Sune Persson</p>
+      <h4 className="category">{book.category}</h4>
+      <h2 className="title">{book.title}</h2>
+      <p className="author">Sune Persson</p>
       <div className="links">
-        <p>Comments</p>
-        <button type="submit" onClick={handleRemoveBook}>Remove</button>
-        <p>Edit</p>
+        <p className="link Line-2">Comments</p>
+        <button className="Line-2" type="submit" onClick={handleRemoveBook}>Remove</button>
+        <p className="link">Edit</p>
       </div>
     </div>
     <div className="progress-bar font-mont">
@@ -22,7 +22,6 @@ const Book = ({ book, handleRemoveBook }) => (
             value={book.id}
             styles={buildStyles({
               pathColor: '#0290ff',
-
             })}
           />
         </div>
