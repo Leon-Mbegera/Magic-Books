@@ -5,7 +5,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const Book = ({ book, handleRemoveBook }) => (
   <div className="Book-panel">
-    <div classsName="book-description">
+    <div className="book-description">
       <h4 className="category">{book.category}</h4>
       <h2 className="title">{book.title}</h2>
       <p className="author">Sune Persson</p>
@@ -15,7 +15,7 @@ const Book = ({ book, handleRemoveBook }) => (
         <p className="link">Edit</p>
       </div>
     </div>
-    <div className="progress-bar font-mont">
+    <div className="progress-bar">
       <div className="outer-circle">
         <div style={{ width: 68, height: 68 }} className="circle-bar">
           <CircularProgressbar
@@ -31,7 +31,7 @@ const Book = ({ book, handleRemoveBook }) => (
         <p>Completed</p>
       </div>
     </div>
-    <div className="book-chapter font-rob">
+    <div className="book-chapter">
       <h4>CURRENT CHAPTER</h4>
       <p>
         Chapter 3: A Lesson Learned
