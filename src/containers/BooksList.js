@@ -3,16 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import store from '../reducers/index';
-import { removeBook, changeFilter } from '../actions';
-import CategoryFilter from '../components/CategoryFilter';
+import { removeBook } from '../actions';
 
 const BooksList = ({ books, filter }) => {
   const handleRemoveBook = (bk) => {
     store.dispatch(removeBook(bk));
-  };
-
-  const handleFilterChange = (e) => {
-    store.dispatch(changeFilter(e.target.value));
   };
 
   let filteredBook;
@@ -24,7 +19,6 @@ const BooksList = ({ books, filter }) => {
 
   return (
     <div>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
       {filteredBook.map((book, idx) => (
         <Book
           key={book.id}

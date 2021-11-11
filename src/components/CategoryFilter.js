@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 const filterCategories = ['All', 'Action', 'Romance', 'Mystery', 'History', 'Kids', 'Sci-Fi'];
 
 const CategoryFilter = ({ handleFilterChange }) => (
-  <select name="filter" onChange={handleFilterChange}>
+  <select className="drop-down" name="filter" onChange={handleFilterChange}>
+    <option value="">Categories</option>
     {filterCategories.map((filtCat) => (
-      <option key={filtCat} value={filtCat}>{filtCat}</option>))}
+      <option key={filtCat} value={filtCat}>{filtCat}</option>
+    ))}
   </select>
 );
 
