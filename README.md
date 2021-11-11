@@ -1,6 +1,8 @@
 # REACT & REDUX BOOK STORE
 Magic-books Inc. is a fictional company based in Germany. They have requested my help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore I have decided to build it with React & Redux.
 
+![](src/assets/scrshot.png)
+
 ## BUILT WITH
 - JavaScript
 - Node.js
