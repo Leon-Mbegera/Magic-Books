@@ -40,12 +40,6 @@ const Book = ({ book, handleRemoveBook }) => (
       <button type="button">UPDATE PROGRESS</button>
     </div>
   </div>
-  // <tr key={book.id}>
-  //   <td>{book.id}</td>
-  //   <td>{book.title}</td>
-  //   <td>{book.category}</td>
-  //   <td><button type="submit" onClick={handleRemoveBook}>X</button></td>
-  // </tr>
 );
 
 Book.propTypes = {
