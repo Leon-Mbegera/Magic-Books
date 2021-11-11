@@ -3,7 +3,7 @@ Magic-books Inc. is a fictional company based in Germany. They have requested my
 
 ![](src/assets/scrshot.png)
 
-## BUILT WITH
+## Built With
 - JavaScript
 - Node.js
 - React
@@ -13,7 +13,7 @@ Magic-books Inc. is a fictional company based in Germany. They have requested my
 - CSS
 
 ## Live Demo
-[click here](https://leonsbookstore.herokuapp.com)
+[heroku link](https://leonsbookstore.herokuapp.com)
 
 ## Getting Started
 # Prerequisities
