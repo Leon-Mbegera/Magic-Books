@@ -31,10 +31,11 @@ const Book = ({ book, handleRemoveBook }) => (
         <p>Completed</p>
       </div>
     </div>
-    <div className="book-chapter">
+    <div className="chapter">
       <h4>CURRENT CHAPTER</h4>
       <p>
-        Chapter 3: A Lesson Learned
+        Chapter 3:&nbsp;
+        <q>A Lesson Learned</q>
       </p>
       <button type="button">UPDATE PROGRESS</button>
     </div>
