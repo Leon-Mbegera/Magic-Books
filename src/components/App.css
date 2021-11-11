@@ -10,7 +10,6 @@ header {
   width: 100%;
   height: 5.938rem;
   margin: 0 0 2.375rem 0;
-  /* padding: 1.438rem 6.188rem 1.688rem 6.25rem; */
   background-color: white;
 }
 
@@ -166,8 +165,6 @@ button {
   width: 4.563rem;
   height: 1.188rem;
   margin: 0.8rem 0.938rem 0.125rem 0;
-  /* padding: 0 1.063rem 0 0;
-  border-right: solid 1px #e8e8e8; */
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
@@ -261,8 +258,7 @@ button {
 
 .book-form {
   width: 75rem;
-  margin-top: 2.5rem;
-  margin-left: 6.25rem;
+  margin: 2.5rem auto 0 auto;
   border-top: solid 1px #e8e8e8;
   margin-bottom: 16rem;
   font-family: 'Montserrat', sans-serif;
@@ -328,35 +324,3 @@ button {
   letter-spacing: -0.15px;
   color: #b3b4b8;
 }
-
-
-/* table {
-  width: 60%;
-  margin: 10% 20%
-  border: 1px solid black;
-}
-
-th {
-  border: 1px solid black;
-}
-
-.book-form {
-  width: 70%;
-  margin: 5% 20%;
-}
-
-input {
-  padding: 5px;
-  width: 40%;
-}
-
-select {
-  width: 30%;
-  padding: 5px;
-  margin-left: 5px;
-}
-
-button {
-  padding: 5px;
-  margin: 5px 5px;
-} */
