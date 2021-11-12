@@ -17,7 +17,6 @@ header {
   margin: 0 auto 0 auto;
 }
 
-
 .heading {
   font-family: 'Montserrat Bold', sans-serif;
   font-size: 1.875rem;
@@ -133,24 +132,6 @@ h2 {
   border-right: solid 1px #e8e8e8;
 }
 
-button {
-  border: none;
-  background: none;
-  width: 4.563rem;
-  height: 1.188rem;
-  margin: 0.8rem 0.938rem 0.125rem 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4386bf;
-}
-
-.progress-bar {
-  border-right: solid 1px #e8e8e8;
-}
-
 .progress-bar p {
   width: 5rem;
   height: 1.125rem;
@@ -205,6 +186,24 @@ button {
   line-height: normal;
   letter-spacing: -0.4px;
   color: #121212;
+}
+
+button {
+  border: none;
+  background: none;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.8rem 0.938rem 0.125rem 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.progress-bar {
+  border-right: solid 1px #e8e8e8;
 }
 
 .chapter button {
@@ -285,16 +284,31 @@ button {
   color: #b3b4b8;
 }
 
-.header-nav, .left-side, .Book-panel, .progress-bar {
+.header-nav,
+.left-side,
+.Book-panel,
+.progress-bar {
   display: flex;
   justify-content: space-between;
 }
 
-.heading, .Books, .drop-down, h2, .author, .link, button, .chapter h4, .chapter p, .add-new, ::placeholder {
+.heading,
+.Books,
+.drop-down,
+h2,
+.author,
+.link,
+.chapter h4,
+.chapter p,
+.add-new,
+::placeholder {
   font-stretch: normal;
   font-style: normal;
 }
 
-.Books, .drop-down, .progress-bar h4, ::placeholder {
-  font-size: normal;
+.Books,
+.drop-down,
+.progress-bar h4,
+::placeholder {
+  font-weight: normal;
 }
